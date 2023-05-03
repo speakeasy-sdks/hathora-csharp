@@ -145,4 +145,4 @@ Utils/IsoDateTimeSerializer.cs
 Utils/PathParamSerializer.cs
 Utils/QueryParamSerializer.cs
 Utils/Utilities.cs
-SDK.csproj
+hathora.csproj

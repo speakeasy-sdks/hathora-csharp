@@ -1,9 +1,9 @@
 configVersion: 1.0.0
 generation:
   telemetryEnabled: false
-  sdkClassName: SDK
+  sdkClassName: hathora
   singleTagPerOp: false
 csharp:
   version: 0.0.1
-  author: Speakeasy
-  packageName: openapi
+  author: Hathora
+  packageName: hathora-cloud
