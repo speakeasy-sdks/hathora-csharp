@@ -1,8 +1,8 @@
 configVersion: 1.0.0
 generation:
-  telemetryEnabled: false
   sdkClassName: hathora
   singleTagPerOp: false
+  telemetryEnabled: false
 csharp:
   version: 0.0.1
   author: Hathora
