@@ -1,0 +1,10 @@
+# CreateLobbyRequestBody
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `initialConfig`                                                                                       | [CreateLobbyRequestBodyInitialConfig](../../Models/Operations/CreateLobbyRequestBodyInitialConfig.md) | :heavy_check_mark:                                                                                    | N/A                                                                                                   |
+| `region`                                                                                              | [Region](../../Models/Shared/Region.md)                                                               | :heavy_check_mark:                                                                                    | N/A                                                                                                   |
+| `visibility`                                                                                          | [CreateLobbyRequestBodyVisibility](../../Models/Operations/CreateLobbyRequestBodyVisibility.md)       | :heavy_check_mark:                                                                                    | N/A                                                                                                   |

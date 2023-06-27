@@ -6,4 +6,5 @@ generation:
 csharp:
   version: 0.0.1
   author: Hathora
+  maxMethodParams: 0
   packageName: hathora-cloud

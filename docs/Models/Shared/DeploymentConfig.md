@@ -1,0 +1,12 @@
+# DeploymentConfig
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `containerPort`                                                               | *int*                                                                         | :heavy_check_mark:                                                            | N/A                                                                           |
+| `env`                                                                         | List<[DeploymentConfigEnv](../../Models/Shared/DeploymentConfigEnv.md)>   !!! | :heavy_check_mark:                                                            | N/A                                                                           |
+| `planName`                                                                    | [PlanName](../../Models/Shared/PlanName.md)                                   | :heavy_check_mark:                                                            | N/A                                                                           |
+| `roomsPerProcess`                                                             | *int*                                                                         | :heavy_check_mark:                                                            | N/A                                                                           |
+| `transportType`                                                               | [TransportType](../../Models/Shared/TransportType.md)                         | :heavy_check_mark:                                                            | N/A                                                                           |

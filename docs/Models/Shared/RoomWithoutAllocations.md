@@ -1,0 +1,13 @@
+# RoomWithoutAllocations
+
+From T, pick a set of properties whose keys are in the union K
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `appId`                                                                                                   | *string*                                                                                                  | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
+| `currentAllocation`                                                                                       | [RoomWithoutAllocationsCurrentAllocation](../../Models/Shared/RoomWithoutAllocationsCurrentAllocation.md) | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
+| `roomId`                                                                                                  | *string*                                                                                                  | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
+| `status`                                                                                                  | [RoomStatus](../../Models/Shared/RoomStatus.md)                                                           | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
