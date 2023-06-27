@@ -360,4 +360,4 @@ src/Utils/PathParamSerializer.cs
 src/Utils/QueryParamSerializer.cs
 src/Utils/SpeakeasyHttpClient.cs
 src/Utils/Utilities.cs
-src/hathora.csproj
+src/Hathora.csproj

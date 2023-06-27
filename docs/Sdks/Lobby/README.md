@@ -18,8 +18,8 @@
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Lobby;
+using Hathora;
+using Hathora.Models.Lobby;
 
 var sdk = new HathoraSDK();
 
@@ -45,8 +45,8 @@ var res = await sdk.Lobby.Create(request);
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Lobby;
+using Hathora;
+using Hathora.Models.Lobby;
 
 var sdk = new HathoraSDK();
 
@@ -72,8 +72,8 @@ var res = await sdk.Lobby.DeprecatedCreateLocalLobby(request);
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Lobby;
+using Hathora;
+using Hathora.Models.Lobby;
 
 var sdk = new HathoraSDK();
 
@@ -99,8 +99,8 @@ var res = await sdk.Lobby.DeprecatedCreatePrivateLobby(request);
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Lobby;
+using Hathora;
+using Hathora.Models.Lobby;
 
 var sdk = new HathoraSDK();
 
@@ -126,8 +126,8 @@ var res = await sdk.Lobby.DeprecatedCreatePublicLobby(request);
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Lobby;
+using Hathora;
+using Hathora.Models.Lobby;
 
 var sdk = new HathoraSDK();
 
@@ -153,8 +153,8 @@ var res = await sdk.Lobby.DeprecatedV1CreatePrivateLobby(request);
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Lobby;
+using Hathora;
+using Hathora.Models.Lobby;
 
 var sdk = new HathoraSDK();
 
@@ -180,8 +180,8 @@ var res = await sdk.Lobby.DeprecatedV1CreatePublicLobby(request);
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Lobby;
+using Hathora;
+using Hathora.Models.Lobby;
 
 var sdk = new HathoraSDK();
 
@@ -205,8 +205,8 @@ var res = await sdk.Lobby.DeprecatedV1ListActivePublicLobbies(request);
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Lobby;
+using Hathora;
+using Hathora.Models.Lobby;
 
 var sdk = new HathoraSDK();
 
@@ -230,8 +230,8 @@ var res = await sdk.Lobby.GetLobbyInfo(request);
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Lobby;
+using Hathora;
+using Hathora.Models.Lobby;
 
 var sdk = new HathoraSDK();
 
@@ -255,8 +255,8 @@ var res = await sdk.Lobby.ListActive(request);
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Lobby;
+using Hathora;
+using Hathora.Models.Lobby;
 
 var sdk = new HathoraSDK();
 

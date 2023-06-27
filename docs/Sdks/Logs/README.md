@@ -11,8 +11,8 @@
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Logs;
+using Hathora;
+using Hathora.Models.Logs;
 
 var sdk = new HathoraSDK();
 
@@ -39,8 +39,8 @@ var res = await sdk.Logs.GetLogsForApp(new GetLogsForAppSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Logs;
+using Hathora;
+using Hathora.Models.Logs;
 
 var sdk = new HathoraSDK();
 
@@ -67,8 +67,8 @@ var res = await sdk.Logs.GetLogsForDeployment(new GetLogsForDeploymentSecurity()
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Logs;
+using Hathora;
+using Hathora.Models.Logs;
 
 var sdk = new HathoraSDK();
 

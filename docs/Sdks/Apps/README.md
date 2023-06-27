@@ -15,8 +15,8 @@
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Apps;
+using Hathora;
+using Hathora.Models.Apps;
 
 var sdk = new HathoraSDK();
 
@@ -43,8 +43,8 @@ var res = await sdk.Apps.Create(new CreateAppSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Apps;
+using Hathora;
+using Hathora.Models.Apps;
 
 var sdk = new HathoraSDK();
 
@@ -71,8 +71,8 @@ var res = await sdk.Apps.Delete(new DeleteAppSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Apps;
+using Hathora;
+using Hathora.Models.Apps;
 
 var sdk = new HathoraSDK();
 
@@ -99,8 +99,8 @@ var res = await sdk.Apps.GetAppInfo(new GetAppInfoSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Apps;
+using Hathora;
+using Hathora.Models.Apps;
 
 var sdk = new HathoraSDK();
 
@@ -126,8 +126,8 @@ var res = await sdk.Apps.GetApps(new GetAppsSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Apps;
+using Hathora;
+using Hathora.Models.Apps;
 
 var sdk = new HathoraSDK();
 
@@ -154,8 +154,8 @@ var res = await sdk.Apps.GetBuildInfo(new GetBuildInfoSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Apps;
+using Hathora;
+using Hathora.Models.Apps;
 
 var sdk = new HathoraSDK();
 
@@ -182,8 +182,8 @@ var res = await sdk.Apps.GetBuilds(new GetBuildsSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Apps;
+using Hathora;
+using Hathora.Models.Apps;
 
 var sdk = new HathoraSDK();
 

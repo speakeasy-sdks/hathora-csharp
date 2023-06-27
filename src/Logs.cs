@@ -7,7 +7,7 @@
 // the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace hathora.Logs
+namespace Hathora.Logs
 {
     using System;
     using System.Collections.Generic;
@@ -17,9 +17,9 @@ namespace hathora.Logs
     using System.Threading.Tasks;
     using Newtonsoft.Json;
     using NodaTime;
-    using hathora.Models.Shared;
-    using hathora.Models.Logs;
-    using hathora.Utils;
+    using Hathora.Models.Shared;
+    using Hathora.Models.Logs;
+    using Hathora.Utils;
 
     public interface ILogsSDK
     {

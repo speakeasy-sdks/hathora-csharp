@@ -7,7 +7,7 @@
 // the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace hathora.Rooms
+namespace Hathora.Rooms
 {
     using System;
     using System.Collections.Generic;
@@ -17,9 +17,9 @@ namespace hathora.Rooms
     using System.Threading.Tasks;
     using Newtonsoft.Json;
     using NodaTime;
-    using hathora.Models.Shared;
-    using hathora.Models.Rooms;
-    using hathora.Utils;
+    using Hathora.Models.Shared;
+    using Hathora.Models.Rooms;
+    using Hathora.Utils;
 
     public interface IRoomsSDK
     {

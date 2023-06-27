@@ -7,9 +7,9 @@
 // the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace hathora.Models.Shared
+namespace Hathora.Models.Shared
 {
-    using hathora.Utils;
+    using Hathora.Utils;
     using NodaTime;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;

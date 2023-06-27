@@ -7,7 +7,7 @@
 // the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace hathora.Deployment
+namespace Hathora.Deployment
 {
     using System;
     using System.Collections.Generic;
@@ -17,9 +17,9 @@ namespace hathora.Deployment
     using System.Threading.Tasks;
     using Newtonsoft.Json;
     using NodaTime;
-    using hathora.Models.Shared;
-    using hathora.Models.Deployment;
-    using hathora.Utils;
+    using Hathora.Models.Shared;
+    using Hathora.Models.Deployment;
+    using Hathora.Utils;
 
     public interface IDeploymentSDK
     {

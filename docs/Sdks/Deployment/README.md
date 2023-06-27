@@ -11,8 +11,8 @@
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Deployment;
+using Hathora;
+using Hathora.Models.Deployment;
 
 var sdk = new HathoraSDK();
 
@@ -39,8 +39,8 @@ var res = await sdk.Deployment.Create(new CreateDeploymentSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Deployment;
+using Hathora;
+using Hathora.Models.Deployment;
 
 var sdk = new HathoraSDK();
 
@@ -67,8 +67,8 @@ var res = await sdk.Deployment.GetDeploymentInfo(new GetDeploymentInfoSecurity()
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Deployment;
+using Hathora;
+using Hathora.Models.Deployment;
 
 var sdk = new HathoraSDK();
 

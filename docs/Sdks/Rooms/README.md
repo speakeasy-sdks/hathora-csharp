@@ -15,8 +15,8 @@
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Rooms;
+using Hathora;
+using Hathora.Models.Rooms;
 
 var sdk = new HathoraSDK();
 
@@ -43,8 +43,8 @@ var res = await sdk.Rooms.Create(new CreateRoomSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Rooms;
+using Hathora;
+using Hathora.Models.Rooms;
 
 var sdk = new HathoraSDK();
 
@@ -71,8 +71,8 @@ var res = await sdk.Rooms.Destroy(new DestroyRoomSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Rooms;
+using Hathora;
+using Hathora.Models.Rooms;
 
 var sdk = new HathoraSDK();
 
@@ -99,8 +99,8 @@ var res = await sdk.Rooms.GetActive(new GetActiveRoomsForProcessSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Rooms;
+using Hathora;
+using Hathora.Models.Rooms;
 
 var sdk = new HathoraSDK();
 
@@ -124,8 +124,8 @@ var res = await sdk.Rooms.GetConnectionInfo(request);
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Rooms;
+using Hathora;
+using Hathora.Models.Rooms;
 
 var sdk = new HathoraSDK();
 
@@ -152,8 +152,8 @@ var res = await sdk.Rooms.GetInactive(new GetInactiveRoomsForProcessSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Rooms;
+using Hathora;
+using Hathora.Models.Rooms;
 
 var sdk = new HathoraSDK();
 
@@ -180,8 +180,8 @@ var res = await sdk.Rooms.GetRoomInfo(new GetRoomInfoSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Rooms;
+using Hathora;
+using Hathora.Models.Rooms;
 
 var sdk = new HathoraSDK();
 

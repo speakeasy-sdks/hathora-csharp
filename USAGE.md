@@ -1,7 +1,7 @@
 <!-- Start SDK Example Usage -->
 ```csharp
-using hathora;
-using hathora.Models.Apps;
+using Hathora;
+using Hathora.Models.Apps;
 
 var sdk = new HathoraSDK();
 

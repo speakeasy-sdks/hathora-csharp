@@ -7,25 +7,25 @@
 // the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace hathora
+namespace Hathora
 {
     using System;
     using System.Threading.Tasks;
     using System.Collections.Generic;
     using System.Text;
-    using hathora.Apps;
-    using hathora.Auth;
-    using hathora.Builds;
-    using hathora.Deployment;
-    using hathora.Discovery;
-    using hathora.Lobby;
-    using hathora.Logs;
-    using hathora.Metrics;
-    using hathora.Processes;
-    using hathora.Rooms;
+    using Hathora.Apps;
+    using Hathora.Auth;
+    using Hathora.Builds;
+    using Hathora.Deployment;
+    using Hathora.Discovery;
+    using Hathora.Lobby;
+    using Hathora.Logs;
+    using Hathora.Metrics;
+    using Hathora.Processes;
+    using Hathora.Rooms;
     using System.Net;
     using System.Net.Http;
-    using hathora.Utils;
+    using Hathora.Utils;
     using NodaTime;
 
     public interface IHathoraSDK

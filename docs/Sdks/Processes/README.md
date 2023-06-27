@@ -11,8 +11,8 @@
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Processes;
+using Hathora;
+using Hathora.Models.Processes;
 
 var sdk = new HathoraSDK();
 
@@ -39,8 +39,8 @@ var res = await sdk.Processes.GetProcessInfo(new GetProcessInfoSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Processes;
+using Hathora;
+using Hathora.Models.Processes;
 
 var sdk = new HathoraSDK();
 
@@ -67,8 +67,8 @@ var res = await sdk.Processes.GetRunning(new GetRunningProcessesSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Processes;
+using Hathora;
+using Hathora.Models.Processes;
 
 var sdk = new HathoraSDK();
 

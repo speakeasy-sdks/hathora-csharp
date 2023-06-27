@@ -7,7 +7,7 @@
 // the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace hathora.Auth
+namespace Hathora.Auth
 {
     using System;
     using System.Collections.Generic;
@@ -17,9 +17,9 @@ namespace hathora.Auth
     using System.Threading.Tasks;
     using Newtonsoft.Json;
     using NodaTime;
-    using hathora.Models.Shared;
-    using hathora.Models.Auth;
-    using hathora.Utils;
+    using Hathora.Models.Shared;
+    using Hathora.Models.Auth;
+    using Hathora.Utils;
 
     public interface IAuthSDK
     {

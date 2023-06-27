@@ -9,8 +9,8 @@
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Discovery;
+using Hathora;
+using Hathora.Models.Discovery;
 
 var sdk = new HathoraSDK();
 

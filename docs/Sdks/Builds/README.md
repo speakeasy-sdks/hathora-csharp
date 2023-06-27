@@ -11,8 +11,8 @@
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Builds;
+using Hathora;
+using Hathora.Models.Builds;
 
 var sdk = new HathoraSDK();
 
@@ -39,8 +39,8 @@ var res = await sdk.Builds.Create(new CreateBuildSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Builds;
+using Hathora;
+using Hathora.Models.Builds;
 
 var sdk = new HathoraSDK();
 
@@ -67,8 +67,8 @@ var res = await sdk.Builds.Delete(new DeleteBuildSecurity() {
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Builds;
+using Hathora;
+using Hathora.Models.Builds;
 
 var sdk = new HathoraSDK();
 

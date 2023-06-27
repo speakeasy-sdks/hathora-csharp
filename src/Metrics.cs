@@ -7,7 +7,7 @@
 // the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace hathora.Metrics
+namespace Hathora.Metrics
 {
     using System;
     using System.Collections.Generic;
@@ -17,9 +17,9 @@ namespace hathora.Metrics
     using System.Threading.Tasks;
     using Newtonsoft.Json;
     using NodaTime;
-    using hathora.Models.Shared;
-    using hathora.Models.Metrics;
-    using hathora.Utils;
+    using Hathora.Models.Shared;
+    using Hathora.Models.Metrics;
+    using Hathora.Utils;
 
     public interface IMetricsSDK
     {

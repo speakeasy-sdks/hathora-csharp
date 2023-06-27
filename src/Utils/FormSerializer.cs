@@ -7,7 +7,7 @@
 // the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace hathora.Utils
+namespace Hathora.Utils
 {
     using System.Collections.Generic;
     using System.Net.Http;

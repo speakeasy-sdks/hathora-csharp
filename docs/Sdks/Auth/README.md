@@ -11,8 +11,8 @@
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Auth;
+using Hathora;
+using Hathora.Models.Auth;
 
 var sdk = new HathoraSDK();
 
@@ -36,8 +36,8 @@ var res = await sdk.Auth.LoginAnonymous(request);
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Auth;
+using Hathora;
+using Hathora.Models.Auth;
 
 var sdk = new HathoraSDK();
 
@@ -61,8 +61,8 @@ var res = await sdk.Auth.LoginGoogle(request);
 ### Example Usage
 
 ```csharp
-using hathora;
-using hathora.Models.Auth;
+using Hathora;
+using Hathora.Models.Auth;
 
 var sdk = new HathoraSDK();
 

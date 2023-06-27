@@ -7,7 +7,7 @@
 // the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace hathora.Processes
+namespace Hathora.Processes
 {
     using System;
     using System.Collections.Generic;
@@ -17,9 +17,9 @@ namespace hathora.Processes
     using System.Threading.Tasks;
     using Newtonsoft.Json;
     using NodaTime;
-    using hathora.Models.Shared;
-    using hathora.Models.Processes;
-    using hathora.Utils;
+    using Hathora.Models.Shared;
+    using Hathora.Models.Processes;
+    using Hathora.Utils;
 
     public interface IProcessesSDK
     {
