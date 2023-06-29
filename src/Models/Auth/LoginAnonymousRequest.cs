@@ -9,32 +9,27 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Auth
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Hathora.Utils;
     
-public class LoginAnonymousRequest
-{
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, LoginAnonymousRequest value, string baseUrl)
+    public class LoginAnonymousRequest
     {
-        if("LoginAnonymous" == operationId)
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, LoginAnonymousRequest value, string baseUrl)
         {
-            
-            var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
-            var message = new HttpRequestMessage(HttpMethod.Post, baseUrl + $"/auth/v1/{appId}/login/anonymous");
-            return message;
+            if("LoginAnonymous" == operationId)
+            {
+                
+                var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
+                var message = new HttpRequestMessage(HttpMethod.Post, baseUrl + $"/auth/v1/{appId}/login/anonymous");
+                return message;
+            }
+            throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [LoginAnonymousRequest]");
         }
-        throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [LoginAnonymousRequest]");
     }
-}
 }

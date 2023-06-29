@@ -9,21 +9,13 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Builds
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
     
-public class RunBuildRequestBody
-{
-    [JsonProperty("file")]
-    public RunBuildRequestBodyFile File { get; set; }
-    
-}
+    public class RunBuildRequestBody
+    {
+        
+        [JsonProperty("file")]
+        public RunBuildRequestBodyFile File { get; set; }
+        
+    }
 }

@@ -9,35 +9,34 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Net.Http;
+using System.Text;
+using Newtonsoft.Json;
+using Hathora.Models.Shared;
+using Hathora.Utils;
     
-public class AppConfig
-{
-    [JsonProperty("appName")]
-    public string AppName { get; set; }
-    
-    [JsonProperty("authConfiguration")]
-    public AppConfigAuthConfiguration AuthConfiguration { get; set; }
-    
-    internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, AppConfig value, string baseUrl)
+    public class AppConfig
     {
-        if("CreateApp" == operationId)
+        
+        [JsonProperty("appName")]
+        public string AppName { get; set; }
+        
+        
+        [JsonProperty("authConfiguration")]
+        public AppConfigAuthConfiguration AuthConfiguration { get; set; }
+        
+        internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, AppConfig value, string baseUrl)
         {
-            var message = new HttpRequestMessage(HttpMethod.Post, baseUrl + "/apps/v1/create");
+            if("CreateApp" == operationId)
+            {
+                var message = new HttpRequestMessage(HttpMethod.Post, baseUrl + "/apps/v1/create");
 
-            string json = JsonConvert.SerializeObject(value);
-            message.Content = new StringContent(json, Encoding.UTF8, "application/json");
-            return message;
+                string json = JsonConvert.SerializeObject(value);
+                message.Content = new StringContent(json, Encoding.UTF8, "application/json");
+                return message;
+            }
+            throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [AppConfig]");
         }
-        throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [AppConfig]");
     }
-}
 }

@@ -10,16 +10,11 @@
 namespace Hathora.Builds
 {
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Newtonsoft.Json;
-    using NodaTime;
-    using Hathora.Models.Shared;
-    using Hathora.Models.Builds;
-    using Hathora.Utils;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Hathora.Models.Builds;
+using Hathora.Models.Shared;
+using Hathora.Utils;
 
     public interface IBuildsSDK
     {

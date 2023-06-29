@@ -9,41 +9,39 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Processes
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Collections.Generic;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Hathora.Models.Shared;
+using Hathora.Utils;
     
-public class GetStoppedProcessesRequest
-{
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    [JsonProperty("region")]
-    public Region? Region { get; set; }
-    
-    internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, GetStoppedProcessesRequest value, string baseUrl)
+    public class GetStoppedProcessesRequest
     {
-        if("GetStoppedProcesses" == operationId)
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        
+        [JsonProperty("region")]
+        public Region? Region { get; set; }
+        
+        internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, GetStoppedProcessesRequest value, string baseUrl)
         {
-            var queryParams = new List<string>();
-            
-            
-            queryParams.Add(QueryParamSerializer.Serialize("form",true, "region", "", value.Region));
-            var queryParamString = $"?{String.Join("&", queryParams)}";
-            
-            var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
-            
-            var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/processes/v1/{appId}/list/stopped" + queryParamString);
-            return message;
+            if("GetStoppedProcesses" == operationId)
+            {
+                var queryParams = new List<string>();
+                
+                
+                queryParams.Add(QueryParamSerializer.Serialize("form",true, "region", "", value.Region));
+                var queryParamString = $"?{String.Join("&", queryParams)}";
+                
+                var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
+                
+                var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/processes/v1/{appId}/list/stopped" + queryParamString);
+                return message;
+            }
+            throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [GetStoppedProcessesRequest]");
         }
-        throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [GetStoppedProcessesRequest]");
     }
-}
 }

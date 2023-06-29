@@ -9,26 +9,22 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using Hathora.Models.Shared;
     
-public class DiscoveryResponse
-{
-    [JsonProperty("host")]
-    public string Host { get; set; }
-    
-    [JsonProperty("port")]
-    public float Port { get; set; }
-    
-    [JsonProperty("region")]
-    public Region Region { get; set; }
-    
-}
+    public class DiscoveryResponse
+    {
+        
+        [JsonProperty("host")]
+        public string Host { get; set; }
+        
+        
+        [JsonProperty("port")]
+        public float Port { get; set; }
+        
+        
+        [JsonProperty("region")]
+        public Region Region { get; set; }
+        
+    }
 }

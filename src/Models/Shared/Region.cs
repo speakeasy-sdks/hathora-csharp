@@ -9,37 +9,29 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
     
-public enum Region
-{
+    public enum Region
+    {
     	[JsonProperty("Seattle")]
-	Seattle,
-	[JsonProperty("Washington_DC")]
-	WashingtonDC,
-	[JsonProperty("Chicago")]
-	Chicago,
-	[JsonProperty("London")]
-	London,
-	[JsonProperty("Frankfurt")]
-	Frankfurt,
-	[JsonProperty("Mumbai")]
-	Mumbai,
-	[JsonProperty("Singapore")]
-	Singapore,
-	[JsonProperty("Tokyo")]
-	Tokyo,
-	[JsonProperty("Sydney")]
-	Sydney,
-	[JsonProperty("Sao_Paulo")]
-	SaoPaulo,
-}
+		Seattle,
+		[JsonProperty("Washington_DC")]
+		WashingtonDC,
+		[JsonProperty("Chicago")]
+		Chicago,
+		[JsonProperty("London")]
+		London,
+		[JsonProperty("Frankfurt")]
+		Frankfurt,
+		[JsonProperty("Mumbai")]
+		Mumbai,
+		[JsonProperty("Singapore")]
+		Singapore,
+		[JsonProperty("Tokyo")]
+		Tokyo,
+		[JsonProperty("Sydney")]
+		Sydney,
+		[JsonProperty("Sao_Paulo")]
+		SaoPaulo,
+    }
 }

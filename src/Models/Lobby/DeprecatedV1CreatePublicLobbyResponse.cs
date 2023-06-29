@@ -9,37 +9,31 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Lobby
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
     using System.Net.Http;
-    using System.Text;
     
-public class DeprecatedV1CreatePublicLobbyResponse {
-    public string? ContentType { get; set; }
-    
-    public string? DeprecatedV1CreatePublicLobby400ApplicationJSONString { get; set; }
-    
-    public string? DeprecatedV1CreatePublicLobby401ApplicationJSONString { get; set; }
-    
-    public string? DeprecatedV1CreatePublicLobby404ApplicationJSONString { get; set; }
-    
-    public string? DeprecatedV1CreatePublicLobby422ApplicationJSONString { get; set; }
-    
-    public string? DeprecatedV1CreatePublicLobby429ApplicationJSONString { get; set; }
-    
-    public string? DeprecatedV1CreatePublicLobby500ApplicationJSONString { get; set; }
-    
-    public string? RoomId { get; set; }
-    
-    public int StatusCode { get; set; }
-    
-    public HttpResponseMessage? RawResponse { get; set; }
-    
-}
+    public class DeprecatedV1CreatePublicLobbyResponse {
+        public string? ContentType { get; set; }
+        
+        public string? DeprecatedV1CreatePublicLobby400ApplicationJSONString { get; set; }
+        
+        public string? DeprecatedV1CreatePublicLobby401ApplicationJSONString { get; set; }
+        
+        public string? DeprecatedV1CreatePublicLobby404ApplicationJSONString { get; set; }
+        
+        public string? DeprecatedV1CreatePublicLobby422ApplicationJSONString { get; set; }
+        
+        public string? DeprecatedV1CreatePublicLobby429ApplicationJSONString { get; set; }
+        
+        public string? DeprecatedV1CreatePublicLobby500ApplicationJSONString { get; set; }
+        
+    /// <summary>
+    /// Ok
+    /// </summary>
+        public string? RoomId { get; set; }
+        
+        public int StatusCode { get; set; }
+        
+        public HttpResponseMessage? RawResponse { get; set; }
+        
+    }
 }

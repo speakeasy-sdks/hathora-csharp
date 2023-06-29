@@ -29,7 +29,7 @@ var res = await sdk.Apps.Create(new CreateAppSecurity() {
 
 | Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
 | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| `request`                                                   | [AppConfig](../../Models/Apps/AppConfig.md)                 | :heavy_check_mark:                                          | The request object to use for the request.                  |
+| `request`                                                   | [AppConfig](../../Models/Shared/AppConfig.md)               | :heavy_check_mark:                                          | The request object to use for the request.                  |
 | `security`                                                  | [CreateAppSecurity](../../Models/Apps/CreateAppSecurity.md) | :heavy_check_mark:                                          | The security requirements to use for the request.           |
 
 
@@ -196,7 +196,7 @@ var res = await sdk.Apps.Update(new UpdateAppSecurity() {
 
 | Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
 | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| `request`                                                   | [UpdateAppRequest](../../Models/Apps/UpdateAppRequest.md)   | :heavy_check_mark:                                          | The request object to use for the request.                  |
+| `request`                                                   | [UpdateAppRequest](../../Models/Shared/UpdateAppRequest.md) | :heavy_check_mark:                                          | The request object to use for the request.                  |
 | `security`                                                  | [UpdateAppSecurity](../../Models/Apps/UpdateAppSecurity.md) | :heavy_check_mark:                                          | The security requirements to use for the request.           |
 
 

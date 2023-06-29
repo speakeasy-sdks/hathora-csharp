@@ -9,47 +9,55 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using Hathora.Models.Shared;
     
-public class Build
-{
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    [JsonProperty("buildId")]
-    public float BuildId { get; set; }
-    
-    [JsonProperty("createdAt")]
-    public DateTime CreatedAt { get; set; }
-    
-    [JsonProperty("createdBy")]
-    public string CreatedBy { get; set; }
-    
-    [JsonProperty("deletedAt")]
-    public DateTime DeletedAt { get; set; }
-    
-    [JsonProperty("finishedAt")]
-    public DateTime FinishedAt { get; set; }
-    
-    [JsonProperty("imageSize")]
-    public float ImageSize { get; set; }
-    
-    [JsonProperty("regionalContainerTags")]
-    public List<BuildRegionalContainerTags> RegionalContainerTags { get; set; }
-    
-    [JsonProperty("startedAt")]
-    public DateTime StartedAt { get; set; }
-    
-    [JsonProperty("status")]
-    public BuildStatus Status { get; set; }
-    
-}
+/// <summary>
+/// Ok
+/// </summary>
+    public class Build
+    {
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        
+        [JsonProperty("buildId")]
+        public float BuildId { get; set; }
+        
+        
+        [JsonProperty("createdAt")]
+        public DateTime CreatedAt { get; set; }
+        
+        
+        [JsonProperty("createdBy")]
+        public string CreatedBy { get; set; }
+        
+        
+        [JsonProperty("deletedAt")]
+        public DateTime DeletedAt { get; set; }
+        
+        
+        [JsonProperty("finishedAt")]
+        public DateTime FinishedAt { get; set; }
+        
+        
+        [JsonProperty("imageSize")]
+        public float ImageSize { get; set; }
+        
+        
+        [JsonProperty("regionalContainerTags")]
+        public List<BuildRegionalContainerTags> RegionalContainerTags { get; set; }
+        
+        
+        [JsonProperty("startedAt")]
+        public DateTime StartedAt { get; set; }
+        
+        
+        [JsonProperty("status")]
+        public BuildStatus Status { get; set; }
+        
+    }
 }

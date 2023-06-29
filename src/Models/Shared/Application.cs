@@ -9,44 +9,50 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using Newtonsoft.Json;
+using Hathora.Models.Shared;
     
-public class Application
-{
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    [JsonProperty("appName")]
-    public string AppName { get; set; }
-    
-    [JsonProperty("appSecret")]
-    public string AppSecret { get; set; }
-    
-    [JsonProperty("authConfiguration")]
-    public ApplicationAuthConfiguration AuthConfiguration { get; set; }
-    
-    [JsonProperty("createdAt")]
-    public DateTime CreatedAt { get; set; }
-    
-    [JsonProperty("createdBy")]
-    public string CreatedBy { get; set; }
-    
-    [JsonProperty("deletedAt")]
-    public DateTime DeletedAt { get; set; }
-    
-    [JsonProperty("deletedBy")]
-    public string DeletedBy { get; set; }
-    
-    [JsonProperty("orgId")]
-    public string OrgId { get; set; }
-    
-}
+/// <summary>
+/// Ok
+/// </summary>
+    public class Application
+    {
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        
+        [JsonProperty("appName")]
+        public string AppName { get; set; }
+        
+        
+        [JsonProperty("appSecret")]
+        public string AppSecret { get; set; }
+        
+        
+        [JsonProperty("authConfiguration")]
+        public ApplicationAuthConfiguration AuthConfiguration { get; set; }
+        
+        
+        [JsonProperty("createdAt")]
+        public DateTime CreatedAt { get; set; }
+        
+        
+        [JsonProperty("createdBy")]
+        public string CreatedBy { get; set; }
+        
+        
+        [JsonProperty("deletedAt")]
+        public DateTime DeletedAt { get; set; }
+        
+        
+        [JsonProperty("deletedBy")]
+        public string DeletedBy { get; set; }
+        
+        
+        [JsonProperty("orgId")]
+        public string OrgId { get; set; }
+        
+    }
 }

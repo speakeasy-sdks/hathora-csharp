@@ -9,27 +9,18 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Apps
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
     using System.Net.Http;
-    using System.Text;
     
-public class DeleteAppResponse {
-    public string? ContentType { get; set; }
-    
-    public string? DeleteApp404ApplicationJSONString { get; set; }
-    
-    public string? DeleteApp500ApplicationJSONString { get; set; }
-    
-    public int StatusCode { get; set; }
-    
-    public HttpResponseMessage? RawResponse { get; set; }
-    
-}
+    public class DeleteAppResponse {
+        public string? ContentType { get; set; }
+        
+        public string? DeleteApp404ApplicationJSONString { get; set; }
+        
+        public string? DeleteApp500ApplicationJSONString { get; set; }
+        
+        public int StatusCode { get; set; }
+        
+        public HttpResponseMessage? RawResponse { get; set; }
+        
+    }
 }

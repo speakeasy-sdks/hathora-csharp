@@ -9,33 +9,27 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Apps
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
     using System.Net.Http;
-    using System.Text;
+using Newtonsoft.Json;
+using Hathora.Utils;
     
-public class GetAppsSecurity
-{
-    [JsonProperty("auth0")]
-    public string Auth0 { get; set; }
-    
-    // Operation security
-    public static void Apply(GetAppsSecurity security, HttpRequestMessage message)
+    public class GetAppsSecurity
     {
-        if(security == null)
+        
+        [JsonProperty("auth0")]
+        public string Auth0 { get; set; }
+        
+        // Operation security
+        public static void Apply(GetAppsSecurity security, HttpRequestMessage message)
         {
-            return;
-        }
-        if(security.Auth0 != null)
-        {
-            message.Headers.Add("Authorization", Utilities.PrefixBearer(Utilities.ToString(security.Auth0)));
+            if(security == null)
+            {
+                return;
+            }
+            if(security.Auth0 != null)
+            {
+                message.Headers.Add("Authorization", Utilities.PrefixBearer(Utilities.ToString(security.Auth0)));
+            }
         }
     }
-}
 }

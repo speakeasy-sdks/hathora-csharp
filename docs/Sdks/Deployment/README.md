@@ -25,7 +25,7 @@ var res = await sdk.Deployment.Create(new CreateDeploymentSecurity() {
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateDeploymentRequest](../../Models/Deployment/CreateDeploymentRequest.md)   | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| `request`                                                                       | [CreateDeploymentRequest](../../Models/Shared/CreateDeploymentRequest.md)       | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 | `security`                                                                      | [CreateDeploymentSecurity](../../Models/Deployment/CreateDeploymentSecurity.md) | :heavy_check_mark:                                                              | The security requirements to use for the request.                               |
 
 

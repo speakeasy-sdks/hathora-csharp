@@ -9,27 +9,22 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Lobby
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using Hathora.Models.Shared;
     
-public class CreateLobbyRequestBody
-{
-    [JsonProperty("initialConfig")]
-    public CreateLobbyRequestBodyInitialConfig InitialConfig { get; set; }
-    
-    [JsonProperty("region")]
-    public Region Region { get; set; }
-    
-    [JsonProperty("visibility")]
-    public CreateLobbyRequestBodyVisibility Visibility { get; set; }
-    
-}
+    public class CreateLobbyRequestBody
+    {
+        
+        [JsonProperty("initialConfig")]
+        public CreateLobbyRequestBodyInitialConfig InitialConfig { get; set; }
+        
+        
+        [JsonProperty("region")]
+        public Region Region { get; set; }
+        
+        
+        [JsonProperty("visibility")]
+        public CreateLobbyRequestBodyVisibility Visibility { get; set; }
+        
+    }
 }

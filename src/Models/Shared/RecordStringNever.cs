@@ -9,17 +9,12 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
     
-public class RecordStringNever
-{
-}
+/// <summary>
+/// Construct a type with a set of properties K of type T
+/// </summary>
+    public class RecordStringNever
+    {
+    }
 }

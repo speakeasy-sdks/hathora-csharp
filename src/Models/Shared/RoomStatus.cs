@@ -9,25 +9,17 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
     
-public enum RoomStatus
-{
+    public enum RoomStatus
+    {
     	[JsonProperty("scheduling")]
-	Scheduling,
-	[JsonProperty("active")]
-	Active,
-	[JsonProperty("suspended")]
-	Suspended,
-	[JsonProperty("destroyed")]
-	Destroyed,
-}
+		Scheduling,
+		[JsonProperty("active")]
+		Active,
+		[JsonProperty("suspended")]
+		Suspended,
+		[JsonProperty("destroyed")]
+		Destroyed,
+    }
 }

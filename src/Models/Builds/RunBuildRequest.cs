@@ -9,46 +9,43 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Builds
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Hathora.Utils;
     
-public class RunBuildRequest
-{
-    [JsonProperty("RequestBody")]
-    public RunBuildRequestBody RequestBody { get; set; }
-    
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    [JsonProperty("buildId")]
-    public float BuildId { get; set; }
-    
-    internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, RunBuildRequest value, string baseUrl)
+    public class RunBuildRequest
     {
-        if("RunBuild" == operationId)
+        
+        [JsonProperty("RequestBody")]
+        public RunBuildRequestBody RequestBody { get; set; }
+        
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        
+        [JsonProperty("buildId")]
+        public float BuildId { get; set; }
+        
+        internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, RunBuildRequest value, string baseUrl)
         {
-            
-            
-            var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
-            
-            var buildId = PathParamSerializer.Serialize("simple", false, value.BuildId);
-            var message = new HttpRequestMessage(HttpMethod.Post, baseUrl + $"/builds/v1/{appId}/run/{buildId}");
-            var formDataContent = new MultipartFormDataContent();
-            
-            formDataContent.Add(new ByteArrayContent(value.RequestBody.File.Content), value.RequestBody.File.File, Utilities.ToString(value.RequestBody.File.Content));
+            if("RunBuild" == operationId)
+            {
+                
+                
+                var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
+                
+                var buildId = PathParamSerializer.Serialize("simple", false, value.BuildId);
+                var message = new HttpRequestMessage(HttpMethod.Post, baseUrl + $"/builds/v1/{appId}/run/{buildId}");
+                var formDataContent = new MultipartFormDataContent();
+                
+                formDataContent.Add(new ByteArrayContent(value.RequestBody.File.Content), value.RequestBody.File.File, Utilities.ToString(value.RequestBody.File.Content));
 
-            message.Content = formDataContent;
-            return message;
+                message.Content = formDataContent;
+                return message;
+            }
+            throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [RunBuildRequest]");
         }
-        throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [RunBuildRequest]");
     }
-}
 }

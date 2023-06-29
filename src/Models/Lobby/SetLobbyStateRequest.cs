@@ -9,44 +9,42 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Lobby
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Net.Http;
+using System.Text;
+using Newtonsoft.Json;
+using Hathora.Utils;
     
-public class SetLobbyStateRequest
-{
-    [JsonProperty("RequestBody")]
-    public SetLobbyStateRequestBody RequestBody { get; set; }
-    
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    [JsonProperty("roomId")]
-    public string RoomId { get; set; }
-    
-    internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, SetLobbyStateRequest value, string baseUrl)
+    public class SetLobbyStateRequest
     {
-        if("SetLobbyState" == operationId)
+        
+        [JsonProperty("RequestBody")]
+        public SetLobbyStateRequestBody RequestBody { get; set; }
+        
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        
+        [JsonProperty("roomId")]
+        public string RoomId { get; set; }
+        
+        internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, SetLobbyStateRequest value, string baseUrl)
         {
-            
-            
-            var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
-            
-            var roomId = PathParamSerializer.Serialize("simple", false, value.RoomId);
-            var message = new HttpRequestMessage(HttpMethod.Post, baseUrl + $"/lobby/v2/{appId}/setState/{roomId}");
+            if("SetLobbyState" == operationId)
+            {
+                
+                
+                var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
+                
+                var roomId = PathParamSerializer.Serialize("simple", false, value.RoomId);
+                var message = new HttpRequestMessage(HttpMethod.Post, baseUrl + $"/lobby/v2/{appId}/setState/{roomId}");
 
-            string json = JsonConvert.SerializeObject(value.RequestBody);
-            message.Content = new StringContent(json, Encoding.UTF8, "application/json");
-            return message;
+                string json = JsonConvert.SerializeObject(value.RequestBody);
+                message.Content = new StringContent(json, Encoding.UTF8, "application/json");
+                return message;
+            }
+            throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [SetLobbyStateRequest]");
         }
-        throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [SetLobbyStateRequest]");
     }
-}
 }

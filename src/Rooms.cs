@@ -10,16 +10,12 @@
 namespace Hathora.Rooms
 {
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Newtonsoft.Json;
-    using NodaTime;
-    using Hathora.Models.Shared;
-    using Hathora.Models.Rooms;
-    using Hathora.Utils;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Hathora.Models.Rooms;
+using Hathora.Models.Shared;
+using Hathora.Utils;
 
     public interface IRoomsSDK
     {

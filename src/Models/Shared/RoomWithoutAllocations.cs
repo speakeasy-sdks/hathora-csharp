@@ -9,29 +9,29 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using Hathora.Models.Shared;
     
-public class RoomWithoutAllocations
-{
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    [JsonProperty("currentAllocation")]
-    public RoomWithoutAllocationsCurrentAllocation CurrentAllocation { get; set; }
-    
-    [JsonProperty("roomId")]
-    public string RoomId { get; set; }
-    
-    [JsonProperty("status")]
-    public RoomStatus Status { get; set; }
-    
-}
+/// <summary>
+/// From T, pick a set of properties whose keys are in the union K
+/// </summary>
+    public class RoomWithoutAllocations
+    {
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        
+        [JsonProperty("currentAllocation")]
+        public RoomWithoutAllocationsCurrentAllocation CurrentAllocation { get; set; }
+        
+        
+        [JsonProperty("roomId")]
+        public string RoomId { get; set; }
+        
+        
+        [JsonProperty("status")]
+        public RoomStatus Status { get; set; }
+        
+    }
 }

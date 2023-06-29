@@ -9,19 +9,11 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
     
-public enum StartingConnectionInfoStatus
-{
+    public enum StartingConnectionInfoStatus
+    {
     	[JsonProperty("starting")]
-	Starting,
-}
+		Starting,
+    }
 }

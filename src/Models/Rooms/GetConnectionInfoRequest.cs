@@ -9,37 +9,33 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Rooms
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Hathora.Utils;
     
-public class GetConnectionInfoRequest
-{
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    [JsonProperty("roomId")]
-    public string RoomId { get; set; }
-    
-    internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, GetConnectionInfoRequest value, string baseUrl)
+    public class GetConnectionInfoRequest
     {
-        if("GetConnectionInfo" == operationId)
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        
+        [JsonProperty("roomId")]
+        public string RoomId { get; set; }
+        
+        internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, GetConnectionInfoRequest value, string baseUrl)
         {
-            
-            var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
-            
-            var roomId = PathParamSerializer.Serialize("simple", false, value.RoomId);
-            var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/rooms/v1/{appId}/connectioninfo/{roomId}");
-            return message;
+            if("GetConnectionInfo" == operationId)
+            {
+                
+                var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
+                
+                var roomId = PathParamSerializer.Serialize("simple", false, value.RoomId);
+                var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/rooms/v1/{appId}/connectioninfo/{roomId}");
+                return message;
+            }
+            throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [GetConnectionInfoRequest]");
         }
-        throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [GetConnectionInfoRequest]");
     }
-}
 }

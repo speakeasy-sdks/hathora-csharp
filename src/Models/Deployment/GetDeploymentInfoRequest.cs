@@ -9,37 +9,33 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Deployment
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Hathora.Utils;
     
-public class GetDeploymentInfoRequest
-{
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    [JsonProperty("deploymentId")]
-    public float DeploymentId { get; set; }
-    
-    internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, GetDeploymentInfoRequest value, string baseUrl)
+    public class GetDeploymentInfoRequest
     {
-        if("GetDeploymentInfo" == operationId)
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        
+        [JsonProperty("deploymentId")]
+        public float DeploymentId { get; set; }
+        
+        internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, GetDeploymentInfoRequest value, string baseUrl)
         {
-            
-            var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
-            
-            var deploymentId = PathParamSerializer.Serialize("simple", false, value.DeploymentId);
-            var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/deployments/v1/{appId}/info/{deploymentId}");
-            return message;
+            if("GetDeploymentInfo" == operationId)
+            {
+                
+                var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
+                
+                var deploymentId = PathParamSerializer.Serialize("simple", false, value.DeploymentId);
+                var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/deployments/v1/{appId}/info/{deploymentId}");
+                return message;
+            }
+            throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [GetDeploymentInfoRequest]");
         }
-        throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [GetDeploymentInfoRequest]");
     }
-}
 }

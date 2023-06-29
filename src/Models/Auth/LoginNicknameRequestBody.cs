@@ -9,21 +9,13 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Auth
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
     
-public class LoginNicknameRequestBody
-{
-    [JsonProperty("nickname")]
-    public string Nickname { get; set; }
-    
-}
+    public class LoginNicknameRequestBody
+    {
+        
+        [JsonProperty("nickname")]
+        public string Nickname { get; set; }
+        
+    }
 }

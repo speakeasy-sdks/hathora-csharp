@@ -10,16 +10,12 @@
 namespace Hathora.Processes
 {
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Newtonsoft.Json;
-    using NodaTime;
-    using Hathora.Models.Shared;
-    using Hathora.Models.Processes;
-    using Hathora.Utils;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Hathora.Models.Processes;
+using Hathora.Models.Shared;
+using Hathora.Utils;
 
     public interface IProcessesSDK
     {

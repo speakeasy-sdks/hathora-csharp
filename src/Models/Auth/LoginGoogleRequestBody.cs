@@ -9,21 +9,13 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Auth
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
     
-public class LoginGoogleRequestBody
-{
-    [JsonProperty("idToken")]
-    public string IdToken { get; set; }
-    
-}
+    public class LoginGoogleRequestBody
+    {
+        
+        [JsonProperty("idToken")]
+        public string IdToken { get; set; }
+        
+    }
 }

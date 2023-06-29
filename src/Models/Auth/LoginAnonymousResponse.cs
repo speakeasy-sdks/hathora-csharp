@@ -9,27 +9,21 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Auth
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
     using System.Net.Http;
-    using System.Text;
     
-public class LoginAnonymousResponse {
-    public string? ContentType { get; set; }
-    
-    public LoginAnonymous200ApplicationJSON? LoginAnonymous200ApplicationJSONObject { get; set; }
-    
-    public string? LoginAnonymous404ApplicationJSONString { get; set; }
-    
-    public int StatusCode { get; set; }
-    
-    public HttpResponseMessage? RawResponse { get; set; }
-    
-}
+    public class LoginAnonymousResponse {
+        public string? ContentType { get; set; }
+        
+    /// <summary>
+    /// Ok
+    /// </summary>
+        public LoginAnonymous200ApplicationJSON? LoginAnonymous200ApplicationJSONObject { get; set; }
+        
+        public string? LoginAnonymous404ApplicationJSONString { get; set; }
+        
+        public int StatusCode { get; set; }
+        
+        public HttpResponseMessage? RawResponse { get; set; }
+        
+    }
 }

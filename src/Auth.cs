@@ -10,16 +10,10 @@
 namespace Hathora.Auth
 {
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Newtonsoft.Json;
-    using NodaTime;
-    using Hathora.Models.Shared;
-    using Hathora.Models.Auth;
-    using Hathora.Utils;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Hathora.Models.Auth;
+using Hathora.Utils;
 
     public interface IAuthSDK
     {

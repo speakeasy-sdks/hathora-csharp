@@ -9,32 +9,27 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Apps
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Hathora.Utils;
     
-public class GetAppInfoRequest
-{
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, GetAppInfoRequest value, string baseUrl)
+    public class GetAppInfoRequest
     {
-        if("GetAppInfo" == operationId)
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, GetAppInfoRequest value, string baseUrl)
         {
-            
-            var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
-            var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/apps/v1/info/{appId}");
-            return message;
+            if("GetAppInfo" == operationId)
+            {
+                
+                var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
+                var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/apps/v1/info/{appId}");
+                return message;
+            }
+            throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [GetAppInfoRequest]");
         }
-        throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [GetAppInfoRequest]");
     }
-}
 }

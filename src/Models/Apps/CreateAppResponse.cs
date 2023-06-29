@@ -9,29 +9,21 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Apps
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
     using System.Net.Http;
-    using System.Text;
+using Hathora.Models.Shared;
     
-public class CreateAppResponse {
-    public Application? Application { get; set; }
-    
-    public string? ContentType { get; set; }
-    
-    public string? CreateApp422ApplicationJSONString { get; set; }
-    
-    public string? CreateApp500ApplicationJSONString { get; set; }
-    
-    public int StatusCode { get; set; }
-    
-    public HttpResponseMessage? RawResponse { get; set; }
-    
-}
+    public class CreateAppResponse {
+        public Application? Application { get; set; }
+        
+        public string? ContentType { get; set; }
+        
+        public string? CreateApp422ApplicationJSONString { get; set; }
+        
+        public string? CreateApp500ApplicationJSONString { get; set; }
+        
+        public int StatusCode { get; set; }
+        
+        public HttpResponseMessage? RawResponse { get; set; }
+        
+    }
 }

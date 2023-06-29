@@ -10,23 +10,20 @@
 namespace Hathora
 {
     using System;
-    using System.Threading.Tasks;
-    using System.Collections.Generic;
-    using System.Text;
-    using Hathora.Apps;
-    using Hathora.Auth;
-    using Hathora.Builds;
-    using Hathora.Deployment;
-    using Hathora.Discovery;
-    using Hathora.Lobby;
-    using Hathora.Logs;
-    using Hathora.Metrics;
-    using Hathora.Processes;
-    using Hathora.Rooms;
-    using System.Net;
-    using System.Net.Http;
-    using Hathora.Utils;
-    using NodaTime;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Hathora.Apps;
+using Hathora.Auth;
+using Hathora.Builds;
+using Hathora.Deployment;
+using Hathora.Discovery;
+using Hathora.Lobby;
+using Hathora.Logs;
+using Hathora.Metrics;
+using Hathora.Processes;
+using Hathora.Rooms;
+using Hathora.Utils;
 
     public interface IHathoraSDK
     {

@@ -10,16 +10,13 @@
 namespace Hathora.Discovery
 {
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Newtonsoft.Json;
-    using NodaTime;
-    using Hathora.Models.Shared;
-    using Hathora.Models.Discovery;
-    using Hathora.Utils;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Hathora.Models.Discovery;
+using Hathora.Models.Shared;
+using Hathora.Utils;
 
     public interface IDiscoverySDK
     {

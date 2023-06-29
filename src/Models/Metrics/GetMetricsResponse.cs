@@ -9,29 +9,24 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Metrics
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
     using System.Net.Http;
-    using System.Text;
+using Hathora.Models.Shared;
     
-public class GetMetricsResponse {
-    public string? ContentType { get; set; }
-    
-    public string? GetMetrics404ApplicationJSONString { get; set; }
-    
-    public string? GetMetrics422ApplicationJSONString { get; set; }
-    
-    public MetricsResponse? MetricsResponse { get; set; }
-    
-    public int StatusCode { get; set; }
-    
-    public HttpResponseMessage? RawResponse { get; set; }
-    
-}
+    public class GetMetricsResponse {
+        public string? ContentType { get; set; }
+        
+        public string? GetMetrics404ApplicationJSONString { get; set; }
+        
+        public string? GetMetrics422ApplicationJSONString { get; set; }
+        
+    /// <summary>
+    /// Ok
+    /// </summary>
+        public MetricsResponse? MetricsResponse { get; set; }
+        
+        public int StatusCode { get; set; }
+        
+        public HttpResponseMessage? RawResponse { get; set; }
+        
+    }
 }

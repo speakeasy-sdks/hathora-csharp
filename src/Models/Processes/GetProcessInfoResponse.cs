@@ -9,27 +9,22 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Processes
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
     using System.Net.Http;
-    using System.Text;
+using Hathora.Models.Shared;
     
-public class GetProcessInfoResponse {
-    public string? ContentType { get; set; }
-    
-    public string? GetProcessInfo404ApplicationJSONString { get; set; }
-    
-    public Process? Process { get; set; }
-    
-    public int StatusCode { get; set; }
-    
-    public HttpResponseMessage? RawResponse { get; set; }
-    
-}
+    public class GetProcessInfoResponse {
+        public string? ContentType { get; set; }
+        
+        public string? GetProcessInfo404ApplicationJSONString { get; set; }
+        
+    /// <summary>
+    /// Ok
+    /// </summary>
+        public Process? Process { get; set; }
+        
+        public int StatusCode { get; set; }
+        
+        public HttpResponseMessage? RawResponse { get; set; }
+        
+    }
 }

@@ -9,24 +9,15 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Lobby
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
     
-public enum CreateLobbyRequestBodyVisibility
-{
+    public enum CreateLobbyRequestBodyVisibility
+    {
     	[JsonProperty("public")]
-	Public,
-	[JsonProperty("private")]
-	Private,
-	[JsonProperty("local")]
-	Local,
-}
+		Public,
+		[JsonProperty("private")]
+		Private,
+		[JsonProperty("local")]
+		Local,
+    }
 }

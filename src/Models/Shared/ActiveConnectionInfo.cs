@@ -9,32 +9,30 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using Hathora.Models.Shared;
     
-public class ActiveConnectionInfo
-{
-    [JsonProperty("host")]
-    public string Host { get; set; }
-    
-    [JsonProperty("port")]
-    public float Port { get; set; }
-    
-    [JsonProperty("roomId")]
-    public string RoomId { get; set; }
-    
-    [JsonProperty("status")]
-    public ActiveConnectionInfoStatus Status { get; set; }
-    
-    [JsonProperty("transportType")]
-    public TransportType TransportType { get; set; }
-    
-}
+    public class ActiveConnectionInfo
+    {
+        
+        [JsonProperty("host")]
+        public string Host { get; set; }
+        
+        
+        [JsonProperty("port")]
+        public float Port { get; set; }
+        
+        
+        [JsonProperty("roomId")]
+        public string RoomId { get; set; }
+        
+        
+        [JsonProperty("status")]
+        public ActiveConnectionInfoStatus Status { get; set; }
+        
+        
+        [JsonProperty("transportType")]
+        public TransportType TransportType { get; set; }
+        
+    }
 }

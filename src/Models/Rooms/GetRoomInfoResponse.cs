@@ -9,27 +9,22 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Rooms
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
     using System.Net.Http;
-    using System.Text;
+using Hathora.Models.Shared;
     
-public class GetRoomInfoResponse {
-    public string? ContentType { get; set; }
-    
-    public string? GetRoomInfo404ApplicationJSONString { get; set; }
-    
-    public Room? Room { get; set; }
-    
-    public int StatusCode { get; set; }
-    
-    public HttpResponseMessage? RawResponse { get; set; }
-    
-}
+    public class GetRoomInfoResponse {
+        public string? ContentType { get; set; }
+        
+        public string? GetRoomInfo404ApplicationJSONString { get; set; }
+        
+    /// <summary>
+    /// Ok
+    /// </summary>
+        public Room? Room { get; set; }
+        
+        public int StatusCode { get; set; }
+        
+        public HttpResponseMessage? RawResponse { get; set; }
+        
+    }
 }

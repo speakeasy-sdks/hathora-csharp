@@ -9,53 +9,52 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Logs
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Collections.Generic;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Hathora.Utils;
     
-public class GetLogsForProcessRequest
-{
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    [JsonProperty("follow")]
-    public bool? Follow { get; set; }
-    
-    [JsonProperty("processId")]
-    public string ProcessId { get; set; }
-    
-    [JsonProperty("tailLines")]
-    public int? TailLines { get; set; }
-    
-    internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, GetLogsForProcessRequest value, string baseUrl)
+    public class GetLogsForProcessRequest
     {
-        if("GetLogsForProcess" == operationId)
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        
+        [JsonProperty("follow")]
+        public bool? Follow { get; set; }
+        
+        
+        [JsonProperty("processId")]
+        public string ProcessId { get; set; }
+        
+        
+        [JsonProperty("tailLines")]
+        public int? TailLines { get; set; }
+        
+        internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, GetLogsForProcessRequest value, string baseUrl)
         {
-            var queryParams = new List<string>();
-            
-            
-            queryParams.Add(QueryParamSerializer.Serialize("form",true, "follow", "", value.Follow));
-            
-            
-            queryParams.Add(QueryParamSerializer.Serialize("form",true, "tailLines", "", value.TailLines));
-            var queryParamString = $"?{String.Join("&", queryParams)}";
-            
-            var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
-            
-            
-            var processId = PathParamSerializer.Serialize("simple", false, value.ProcessId);
-            
-            var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/logs/v1/{appId}/process/{processId}" + queryParamString);
-            return message;
+            if("GetLogsForProcess" == operationId)
+            {
+                var queryParams = new List<string>();
+                
+                
+                queryParams.Add(QueryParamSerializer.Serialize("form",true, "follow", "", value.Follow));
+                
+                
+                queryParams.Add(QueryParamSerializer.Serialize("form",true, "tailLines", "", value.TailLines));
+                var queryParamString = $"?{String.Join("&", queryParams)}";
+                
+                var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
+                
+                
+                var processId = PathParamSerializer.Serialize("simple", false, value.ProcessId);
+                
+                var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/logs/v1/{appId}/process/{processId}" + queryParamString);
+                return message;
+            }
+            throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [GetLogsForProcessRequest]");
         }
-        throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [GetLogsForProcessRequest]");
     }
-}
 }

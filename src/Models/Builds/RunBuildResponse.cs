@@ -9,29 +9,23 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Builds
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
     using System.Net.Http;
-    using System.Text;
     
-public class RunBuildResponse {
-    public string? ContentType { get; set; }
-    
-    public string? RunBuild200TextPlainByteString { get; set; }
-    
-    public string? RunBuild404ApplicationJSONString { get; set; }
-    
-    public int StatusCode { get; set; }
-    
-    public HttpResponseMessage? RawResponse { get; set; }
-    
-    public string? RunBuild500ApplicationJSONString { get; set; }
-    
-}
+    public class RunBuildResponse {
+        public string? ContentType { get; set; }
+        
+    /// <summary>
+    /// Ok
+    /// </summary>
+        public string? RunBuild200TextPlainByteString { get; set; }
+        
+        public string? RunBuild404ApplicationJSONString { get; set; }
+        
+        public int StatusCode { get; set; }
+        
+        public HttpResponseMessage? RawResponse { get; set; }
+        
+        public string? RunBuild500ApplicationJSONString { get; set; }
+        
+    }
 }

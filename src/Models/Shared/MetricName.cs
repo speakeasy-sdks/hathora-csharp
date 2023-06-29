@@ -9,25 +9,17 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
     
-public enum MetricName
-{
+    public enum MetricName
+    {
     	[JsonProperty("cpu")]
-	Cpu,
-	[JsonProperty("memory")]
-	Memory,
-	[JsonProperty("rate_egress")]
-	RateEgress,
-	[JsonProperty("total_egress")]
-	TotalEgress,
-}
+		Cpu,
+		[JsonProperty("memory")]
+		Memory,
+		[JsonProperty("rate_egress")]
+		RateEgress,
+		[JsonProperty("total_egress")]
+		TotalEgress,
+    }
 }

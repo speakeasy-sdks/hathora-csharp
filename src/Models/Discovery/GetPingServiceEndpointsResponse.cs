@@ -9,25 +9,21 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Discovery
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
     using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Net.Http;
+using Hathora.Models.Shared;
     
-public class GetPingServiceEndpointsResponse {
-    public string? ContentType { get; set; }
-    
-    public List<DiscoveryResponse>? DiscoveryResponse { get; set; }
-    
-    public int StatusCode { get; set; }
-    
-    public HttpResponseMessage? RawResponse { get; set; }
-    
-}
+    public class GetPingServiceEndpointsResponse {
+        public string? ContentType { get; set; }
+        
+    /// <summary>
+    /// Ok
+    /// </summary>
+        public List<DiscoveryResponse>? DiscoveryResponse { get; set; }
+        
+        public int StatusCode { get; set; }
+        
+        public HttpResponseMessage? RawResponse { get; set; }
+        
+    }
 }

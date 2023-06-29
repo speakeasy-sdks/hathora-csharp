@@ -9,32 +9,27 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Deployment
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Hathora.Utils;
     
-public class GetDeploymentsRequest
-{
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, GetDeploymentsRequest value, string baseUrl)
+    public class GetDeploymentsRequest
     {
-        if("GetDeployments" == operationId)
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, GetDeploymentsRequest value, string baseUrl)
         {
-            
-            var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
-            var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/deployments/v1/{appId}/list");
-            return message;
+            if("GetDeployments" == operationId)
+            {
+                
+                var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
+                var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/deployments/v1/{appId}/list");
+                return message;
+            }
+            throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [GetDeploymentsRequest]");
         }
-        throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [GetDeploymentsRequest]");
     }
-}
 }

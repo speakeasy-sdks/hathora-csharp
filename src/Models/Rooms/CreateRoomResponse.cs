@@ -9,31 +9,22 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Rooms
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
     using System.Net.Http;
-    using System.Text;
     
-public class CreateRoomResponse {
-    public string? ContentType { get; set; }
-    
-    public string? CreateRoom400ApplicationJSONString { get; set; }
-    
-    public string? CreateRoom404ApplicationJSONString { get; set; }
-    
-    public string? CreateRoom500ApplicationJSONString { get; set; }
-    
-    public string? RoomId { get; set; }
-    
-    public int StatusCode { get; set; }
-    
-    public HttpResponseMessage? RawResponse { get; set; }
-    
-}
+    public class CreateRoomResponse {
+        public string? ContentType { get; set; }
+        
+        public string? CreateRoom400ApplicationJSONString { get; set; }
+        
+        public string? CreateRoom404ApplicationJSONString { get; set; }
+        
+        public string? CreateRoom500ApplicationJSONString { get; set; }
+        
+        public string? RoomId { get; set; }
+        
+        public int StatusCode { get; set; }
+        
+        public HttpResponseMessage? RawResponse { get; set; }
+        
+    }
 }

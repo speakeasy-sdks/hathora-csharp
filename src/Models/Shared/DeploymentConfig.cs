@@ -9,32 +9,31 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
     using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using Newtonsoft.Json;
+using Hathora.Models.Shared;
     
-public class DeploymentConfig
-{
-    [JsonProperty("containerPort")]
-    public int ContainerPort { get; set; }
-    
-    [JsonProperty("env")]
-    public List<DeploymentConfigEnv> Env { get; set; }
-    
-    [JsonProperty("planName")]
-    public PlanName PlanName { get; set; }
-    
-    [JsonProperty("roomsPerProcess")]
-    public int RoomsPerProcess { get; set; }
-    
-    [JsonProperty("transportType")]
-    public TransportType TransportType { get; set; }
-    
-}
+    public class DeploymentConfig
+    {
+        
+        [JsonProperty("containerPort")]
+        public int ContainerPort { get; set; }
+        
+        
+        [JsonProperty("env")]
+        public List<DeploymentConfigEnv> Env { get; set; }
+        
+        
+        [JsonProperty("planName")]
+        public PlanName PlanName { get; set; }
+        
+        
+        [JsonProperty("roomsPerProcess")]
+        public int RoomsPerProcess { get; set; }
+        
+        
+        [JsonProperty("transportType")]
+        public TransportType TransportType { get; set; }
+        
+    }
 }

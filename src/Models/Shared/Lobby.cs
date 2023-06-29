@@ -9,44 +9,50 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using Newtonsoft.Json;
+using Hathora.Models.Shared;
     
-public class Lobby
-{
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    [JsonProperty("createdAt")]
-    public DateTime CreatedAt { get; set; }
-    
-    [JsonProperty("createdBy")]
-    public string CreatedBy { get; set; }
-    
-    [JsonProperty("initialConfig")]
-    public LobbyInitialConfig InitialConfig { get; set; }
-    
-    [JsonProperty("local")]
-    public bool Local { get; set; }
-    
-    [JsonProperty("region")]
-    public Region Region { get; set; }
-    
-    [JsonProperty("roomId")]
-    public string RoomId { get; set; }
-    
-    [JsonProperty("state")]
-    public LobbyState? State { get; set; }
-    
-    [JsonProperty("visibility")]
-    public LobbyVisibility Visibility { get; set; }
-    
-}
+/// <summary>
+/// Ok
+/// </summary>
+    public class Lobby
+    {
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        
+        [JsonProperty("createdAt")]
+        public DateTime CreatedAt { get; set; }
+        
+        
+        [JsonProperty("createdBy")]
+        public string CreatedBy { get; set; }
+        
+        
+        [JsonProperty("initialConfig")]
+        public LobbyInitialConfig InitialConfig { get; set; }
+        
+        
+        [JsonProperty("local")]
+        public bool Local { get; set; }
+        
+        
+        [JsonProperty("region")]
+        public Region Region { get; set; }
+        
+        
+        [JsonProperty("roomId")]
+        public string RoomId { get; set; }
+        
+        
+        [JsonProperty("state")]
+        public LobbyState? State { get; set; }
+        
+        
+        [JsonProperty("visibility")]
+        public LobbyVisibility Visibility { get; set; }
+        
+    }
 }

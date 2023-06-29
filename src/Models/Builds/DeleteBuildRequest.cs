@@ -9,37 +9,33 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Builds
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Hathora.Utils;
     
-public class DeleteBuildRequest
-{
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    [JsonProperty("buildId")]
-    public float BuildId { get; set; }
-    
-    internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, DeleteBuildRequest value, string baseUrl)
+    public class DeleteBuildRequest
     {
-        if("DeleteBuild" == operationId)
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        
+        [JsonProperty("buildId")]
+        public float BuildId { get; set; }
+        
+        internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, DeleteBuildRequest value, string baseUrl)
         {
-            
-            var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
-            
-            var buildId = PathParamSerializer.Serialize("simple", false, value.BuildId);
-            var message = new HttpRequestMessage(HttpMethod.Delete, baseUrl + $"/builds/v1/{appId}/delete/{buildId}");
-            return message;
+            if("DeleteBuild" == operationId)
+            {
+                
+                var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
+                
+                var buildId = PathParamSerializer.Serialize("simple", false, value.BuildId);
+                var message = new HttpRequestMessage(HttpMethod.Delete, baseUrl + $"/builds/v1/{appId}/delete/{buildId}");
+                return message;
+            }
+            throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [DeleteBuildRequest]");
         }
-        throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [DeleteBuildRequest]");
     }
-}
 }

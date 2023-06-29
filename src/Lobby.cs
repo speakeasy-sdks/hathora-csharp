@@ -10,16 +10,12 @@
 namespace Hathora.Lobby
 {
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Newtonsoft.Json;
-    using NodaTime;
-    using Hathora.Models.Shared;
-    using Hathora.Models.Lobby;
-    using Hathora.Utils;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Hathora.Models.Lobby;
+using Hathora.Models.Shared;
+using Hathora.Utils;
 
     public interface ILobbySDK
     {
@@ -129,6 +125,7 @@ namespace Hathora.Lobby
     }
 
         
+    [Obsolete("This method will be removed in a future release, please migrate away from it as soon as possible")]
     public async Task<DeprecatedCreateLocalLobbyResponse> DeprecatedCreateLocalLobbyAsync(DeprecatedCreateLocalLobbyRequest? request = null)
     {
         string baseUrl = "";
@@ -203,6 +200,7 @@ namespace Hathora.Lobby
     }
 
         
+    [Obsolete("This method will be removed in a future release, please migrate away from it as soon as possible")]
     public async Task<DeprecatedCreatePrivateLobbyResponse> DeprecatedCreatePrivateLobbyAsync(DeprecatedCreatePrivateLobbyRequest? request = null)
     {
         string baseUrl = "";
@@ -277,6 +275,7 @@ namespace Hathora.Lobby
     }
 
         
+    [Obsolete("This method will be removed in a future release, please migrate away from it as soon as possible")]
     public async Task<DeprecatedCreatePublicLobbyResponse> DeprecatedCreatePublicLobbyAsync(DeprecatedCreatePublicLobbyRequest? request = null)
     {
         string baseUrl = "";
@@ -351,6 +350,7 @@ namespace Hathora.Lobby
     }
 
         
+    [Obsolete("This method will be removed in a future release, please migrate away from it as soon as possible")]
     public async Task<DeprecatedV1CreatePrivateLobbyResponse> DeprecatedV1CreatePrivateLobbyAsync(DeprecatedV1CreatePrivateLobbyRequest request)
     {
         string baseUrl = "";
@@ -425,6 +425,7 @@ namespace Hathora.Lobby
     }
 
         
+    [Obsolete("This method will be removed in a future release, please migrate away from it as soon as possible")]
     public async Task<DeprecatedV1CreatePublicLobbyResponse> DeprecatedV1CreatePublicLobbyAsync(DeprecatedV1CreatePublicLobbyRequest request)
     {
         string baseUrl = "";
@@ -499,6 +500,7 @@ namespace Hathora.Lobby
     }
 
         
+    [Obsolete("This method will be removed in a future release, please migrate away from it as soon as possible")]
     public async Task<DeprecatedV1ListActivePublicLobbiesResponse> DeprecatedV1ListActivePublicLobbiesAsync(DeprecatedV1ListActivePublicLobbiesRequest request)
     {
         string baseUrl = "";

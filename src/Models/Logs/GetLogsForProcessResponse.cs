@@ -9,27 +9,21 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Logs
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
     using System.Net.Http;
-    using System.Text;
     
-public class GetLogsForProcessResponse {
-    public string? ContentType { get; set; }
-    
-    public string? GetLogsForProcess200TextPlainByteString { get; set; }
-    
-    public string? GetLogsForProcess404ApplicationJSONString { get; set; }
-    
-    public int StatusCode { get; set; }
-    
-    public HttpResponseMessage? RawResponse { get; set; }
-    
-}
+    public class GetLogsForProcessResponse {
+        public string? ContentType { get; set; }
+        
+    /// <summary>
+    /// Ok
+    /// </summary>
+        public string? GetLogsForProcess200TextPlainByteString { get; set; }
+        
+        public string? GetLogsForProcess404ApplicationJSONString { get; set; }
+        
+        public int StatusCode { get; set; }
+        
+        public HttpResponseMessage? RawResponse { get; set; }
+        
+    }
 }

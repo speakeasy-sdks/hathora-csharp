@@ -9,21 +9,13 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Lobby
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
     
-public class SetLobbyStateRequestBody
-{
-    [JsonProperty("state")]
-    public SetLobbyStateRequestBodyState State { get; set; }
-    
-}
+    public class SetLobbyStateRequestBody
+    {
+        
+        [JsonProperty("state")]
+        public SetLobbyStateRequestBodyState State { get; set; }
+        
+    }
 }

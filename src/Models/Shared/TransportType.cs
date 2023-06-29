@@ -9,23 +9,15 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
     
-public enum TransportType
-{
+    public enum TransportType
+    {
     	[JsonProperty("tcp")]
-	Tcp,
-	[JsonProperty("udp")]
-	Udp,
-	[JsonProperty("tls")]
-	Tls,
-}
+		Tcp,
+		[JsonProperty("udp")]
+		Udp,
+		[JsonProperty("tls")]
+		Tls,
+    }
 }

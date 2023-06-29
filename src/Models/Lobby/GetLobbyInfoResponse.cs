@@ -9,27 +9,22 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Lobby
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
     using System.Net.Http;
-    using System.Text;
+using Hathora.Models.Shared;
     
-public class GetLobbyInfoResponse {
-    public string? ContentType { get; set; }
-    
-    public string? GetLobbyInfo404ApplicationJSONString { get; set; }
-    
-    public Lobby? Lobby { get; set; }
-    
-    public int StatusCode { get; set; }
-    
-    public HttpResponseMessage? RawResponse { get; set; }
-    
-}
+    public class GetLobbyInfoResponse {
+        public string? ContentType { get; set; }
+        
+        public string? GetLobbyInfo404ApplicationJSONString { get; set; }
+        
+    /// <summary>
+    /// Ok
+    /// </summary>
+        public Lobby? Lobby { get; set; }
+        
+        public int StatusCode { get; set; }
+        
+        public HttpResponseMessage? RawResponse { get; set; }
+        
+    }
 }

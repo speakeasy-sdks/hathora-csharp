@@ -9,41 +9,39 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Processes
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Collections.Generic;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Hathora.Models.Shared;
+using Hathora.Utils;
     
-public class GetRunningProcessesRequest
-{
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    [JsonProperty("region")]
-    public Region? Region { get; set; }
-    
-    internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, GetRunningProcessesRequest value, string baseUrl)
+    public class GetRunningProcessesRequest
     {
-        if("GetRunningProcesses" == operationId)
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        
+        [JsonProperty("region")]
+        public Region? Region { get; set; }
+        
+        internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, GetRunningProcessesRequest value, string baseUrl)
         {
-            var queryParams = new List<string>();
-            
-            
-            queryParams.Add(QueryParamSerializer.Serialize("form",true, "region", "", value.Region));
-            var queryParamString = $"?{String.Join("&", queryParams)}";
-            
-            var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
-            
-            var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/processes/v1/{appId}/list/running" + queryParamString);
-            return message;
+            if("GetRunningProcesses" == operationId)
+            {
+                var queryParams = new List<string>();
+                
+                
+                queryParams.Add(QueryParamSerializer.Serialize("form",true, "region", "", value.Region));
+                var queryParamString = $"?{String.Join("&", queryParams)}";
+                
+                var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
+                
+                var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/processes/v1/{appId}/list/running" + queryParamString);
+                return message;
+            }
+            throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [GetRunningProcessesRequest]");
         }
-        throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [GetRunningProcessesRequest]");
     }
-}
 }

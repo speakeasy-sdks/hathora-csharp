@@ -9,25 +9,17 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
     
-public enum BuildStatus
-{
+    public enum BuildStatus
+    {
     	[JsonProperty("created")]
-	Created,
-	[JsonProperty("running")]
-	Running,
-	[JsonProperty("succeeded")]
-	Succeeded,
-	[JsonProperty("failed")]
-	Failed,
-}
+		Created,
+		[JsonProperty("running")]
+		Running,
+		[JsonProperty("succeeded")]
+		Succeeded,
+		[JsonProperty("failed")]
+		Failed,
+    }
 }

@@ -9,26 +9,28 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using Hathora.Models.Shared;
     
-public class AppConfigAuthConfiguration
-{
-    [JsonProperty("anonymous")]
-    public RecordStringNever? Anonymous { get; set; }
-    
-    [JsonProperty("google")]
-    public AppConfigAuthConfigurationGoogle? Google { get; set; }
-    
-    [JsonProperty("nickname")]
-    public RecordStringNever? Nickname { get; set; }
-    
-}
+    public class AppConfigAuthConfiguration
+    {
+    /// <summary>
+    /// Construct a type with a set of properties K of type T
+    /// </summary>
+        
+        [JsonProperty("anonymous")]
+        public RecordStringNever? Anonymous { get; set; }
+        
+        
+        [JsonProperty("google")]
+        public AppConfigAuthConfigurationGoogle? Google { get; set; }
+        
+    /// <summary>
+    /// Construct a type with a set of properties K of type T
+    /// </summary>
+        
+        [JsonProperty("nickname")]
+        public RecordStringNever? Nickname { get; set; }
+        
+    }
 }

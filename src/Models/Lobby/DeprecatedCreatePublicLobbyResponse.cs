@@ -9,37 +9,29 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Lobby
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
     using System.Net.Http;
-    using System.Text;
+using Hathora.Models.Shared;
     
-public class DeprecatedCreatePublicLobbyResponse {
-    public string? ContentType { get; set; }
-    
-    public string? DeprecatedCreatePublicLobby400ApplicationJSONString { get; set; }
-    
-    public string? DeprecatedCreatePublicLobby401ApplicationJSONString { get; set; }
-    
-    public string? DeprecatedCreatePublicLobby404ApplicationJSONString { get; set; }
-    
-    public string? DeprecatedCreatePublicLobby422ApplicationJSONString { get; set; }
-    
-    public string? DeprecatedCreatePublicLobby429ApplicationJSONString { get; set; }
-    
-    public string? DeprecatedCreatePublicLobby500ApplicationJSONString { get; set; }
-    
-    public Lobby? Lobby { get; set; }
-    
-    public int StatusCode { get; set; }
-    
-    public HttpResponseMessage? RawResponse { get; set; }
-    
-}
+    public class DeprecatedCreatePublicLobbyResponse {
+        public string? ContentType { get; set; }
+        
+        public string? DeprecatedCreatePublicLobby400ApplicationJSONString { get; set; }
+        
+        public string? DeprecatedCreatePublicLobby401ApplicationJSONString { get; set; }
+        
+        public string? DeprecatedCreatePublicLobby404ApplicationJSONString { get; set; }
+        
+        public string? DeprecatedCreatePublicLobby422ApplicationJSONString { get; set; }
+        
+        public string? DeprecatedCreatePublicLobby429ApplicationJSONString { get; set; }
+        
+        public string? DeprecatedCreatePublicLobby500ApplicationJSONString { get; set; }
+        
+        public Lobby? Lobby { get; set; }
+        
+        public int StatusCode { get; set; }
+        
+        public HttpResponseMessage? RawResponse { get; set; }
+        
+    }
 }

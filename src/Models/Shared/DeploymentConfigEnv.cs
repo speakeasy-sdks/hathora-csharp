@@ -9,23 +9,17 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
     
-public class DeploymentConfigEnv
-{
-    [JsonProperty("name")]
-    public string Name { get; set; }
-    
-    [JsonProperty("value")]
-    public string Value { get; set; }
-    
-}
+    public class DeploymentConfigEnv
+    {
+        
+        [JsonProperty("name")]
+        public string Name { get; set; }
+        
+        
+        [JsonProperty("value")]
+        public string Value { get; set; }
+        
+    }
 }

@@ -9,29 +9,30 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Shared
 {
-    using Hathora.Utils;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System;
     using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using Newtonsoft.Json;
+using Hathora.Models.Shared;
     
-public class MetricsResponse
-{
-    [JsonProperty("cpu")]
-    public List<MetricValue>? Cpu { get; set; }
-    
-    [JsonProperty("memory")]
-    public List<MetricValue>? Memory { get; set; }
-    
-    [JsonProperty("rate_egress")]
-    public List<MetricValue>? RateEgress { get; set; }
-    
-    [JsonProperty("total_egress")]
-    public List<MetricValue>? TotalEgress { get; set; }
-    
-}
+/// <summary>
+/// Construct a type with a set of properties K of type T
+/// </summary>
+    public class MetricsResponse
+    {
+        
+        [JsonProperty("cpu")]
+        public List<MetricValue>? Cpu { get; set; }
+        
+        
+        [JsonProperty("memory")]
+        public List<MetricValue>? Memory { get; set; }
+        
+        
+        [JsonProperty("rate_egress")]
+        public List<MetricValue>? RateEgress { get; set; }
+        
+        
+        [JsonProperty("total_egress")]
+        public List<MetricValue>? TotalEgress { get; set; }
+        
+    }
 }

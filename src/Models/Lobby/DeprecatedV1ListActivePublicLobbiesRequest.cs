@@ -9,50 +9,49 @@
 //------------------------------------------------------------------------------
 namespace Hathora.Models.Lobby
 {
-    using Hathora.Utils;
-    using Hathora.Models.Shared;
-    using NodaTime;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
+using System.Collections.Generic;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Hathora.Models.Shared;
+using Hathora.Utils;
     
-public class DeprecatedV1ListActivePublicLobbiesRequest
-{
-    [JsonProperty("appId")]
-    public string AppId { get; set; }
-    
-    [JsonProperty("local")]
-    public bool? Local { get; set; }
-    
-    [JsonProperty("region")]
-    public Region? Region { get; set; }
-    
-    internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, DeprecatedV1ListActivePublicLobbiesRequest value, string baseUrl)
+    public class DeprecatedV1ListActivePublicLobbiesRequest
     {
-        if("DeprecatedV1ListActivePublicLobbies" == operationId)
+        
+        [JsonProperty("appId")]
+        public string AppId { get; set; }
+        
+        
+        [JsonProperty("local")]
+        public bool? Local { get; set; }
+        
+        
+        [JsonProperty("region")]
+        public Region? Region { get; set; }
+        
+        internal static HttpRequestMessage BuildHttpRequestMessage(string operationId, DeprecatedV1ListActivePublicLobbiesRequest value, string baseUrl)
         {
-            var queryParams = new List<string>();
-            
-            
-            queryParams.Add(QueryParamSerializer.Serialize("form",true, "local", "", value.Local));
-            
-            queryParams.Add(QueryParamSerializer.Serialize("form",true, "region", "", value.Region));
-            var queryParamString = $"?{String.Join("&", queryParams)}";
-            
-            var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
-            
-            
-            var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/lobby/v1/{appId}/list" + queryParamString);
-            
-            
-            
-            return message;
+            if("DeprecatedV1ListActivePublicLobbies" == operationId)
+            {
+                var queryParams = new List<string>();
+                
+                
+                queryParams.Add(QueryParamSerializer.Serialize("form",true, "local", "", value.Local));
+                
+                queryParams.Add(QueryParamSerializer.Serialize("form",true, "region", "", value.Region));
+                var queryParamString = $"?{String.Join("&", queryParams)}";
+                
+                var appId = PathParamSerializer.Serialize("simple", false, value.AppId);
+                
+                
+                var message = new HttpRequestMessage(HttpMethod.Get, baseUrl + $"/lobby/v1/{appId}/list" + queryParamString);
+                
+                
+                
+                return message;
+            }
+            throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [DeprecatedV1ListActivePublicLobbiesRequest]");
         }
-        throw new ArgumentException($"Attempt to build HttpRequestMessage for invalid operationId [{operationId}] for request type [DeprecatedV1ListActivePublicLobbiesRequest]");
     }
-}
 }
